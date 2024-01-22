@@ -1,0 +1,306 @@
+/*Espacio para variables globales. Colores y tipografía*/
+
+:root {
+    --fuente-sans-serif: 'Helvetica', 'Arial', sans-serif;
+    --fuente-serif: 'Georgia', 'Times', serif;
+    --color-Negro: #000000;
+    --color-Blanco: #ffffff;
+    --color-GrisOscuro: #333;
+}
+
+/* Header y footer. Primero elementos comunes, luego paddings específicos*/
+
+header, footer {
+    font-family: var(--fuente-sans-serif);
+    background-color: var(--color-Negro);
+    width: 100%;
+    text-align: center;
+    color: var(--color-Blanco);
+}
+
+header {
+    padding: 10px 0px 20px;
+}
+
+footer {
+    padding: 40px 0px;
+}
+
+nav a {
+    display: block;
+    padding: 6px 2px;
+    color: var(--color-Blanco);
+    text-decoration: none;
+}
+
+nav a:hover { /* Navegacion del header al pasar el ratón por encima */
+    color: #ff1616;
+}
+
+nav a.currentPage { /* Vista del elemento actual. No me quiere */
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav ul li {
+    display: block;
+}
+
+/* Propiedades generales para la alineación del contenido (body ocupa todo y reducciones posteriores)*/
+
+body {
+    margin: 0 auto;
+}
+
+main {
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* Disposicion es de contenedores */
+
+article, article img { /* Todo el articulo al 100%, y la imagen del primer robot*/
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section img { /* Resto de imagenes, a mitad */
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding-top: 20px ;
+    align-items: center;
+}
+
+/* Títulos de las tres páginas*/
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+    justify-content: center;
+    width: 100%;
+    font-size: 70px;
+    margin: 20px;
+    color: var(--color-GrisOscuro);
+}
+
+/* Disposicion general del texto dentro del main. Tipografía, justificado y color */
+
+main p {
+    font-family: var(--fuente-serif);
+    text-align: justify;
+    color: var(--color-GrisOscuro);
+}
+
+/*Index y robots de ficción tienen similitudes en varias partes. Se agrupan y se especifican las concreciones*/
+
+main article section h3, main article section h4, #autor, #fecha, section a  {
+    display: flex;
+    align-items: left;
+    text-align: left;
+    font-family: var(--fuente-sans-serif);
+    font-weight: 300;
+    justify-content: left;
+    width: 100%;
+    color: var(--color-GrisOscuro);
+    margin: 30px 0px 0px 0px;
+}
+
+main article section h3 {
+    font-size: 50px;
+}
+
+main article section h4 {
+    font-size: 30px;
+}
+
+#autor {
+    font-size: 14px;
+    margin: 0px;
+    text-decoration: none;
+    color: orange;
+}
+
+#autor:hover {
+    text-decoration: underline; /* Añade subrayado en el estado hover */
+}
+
+#fecha {
+    font-size: 14px;
+    margin: 10px 0px 30px 0px;
+}
+
+section a {
+    margin: 10px 0px 30px 0px;
+    justify-content: center;
+    color: orange;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline; 
+}
+
+main section {
+    display: block;
+    align-items: center;
+    text-align: left;
+    justify-content: left;
+    margin: auto;
+    width: 100%;
+    padding-block: 5px 10px;
+}
+
+/*Bloques de texto y enumeradores.*/
+
+section p, main ul, main section ul {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 1.25px;
+    color: var(--color-GrisOscuro);
+}
+
+section p, main ul {
+    font-family: var(--fuente-sans-serif);
+}
+
+.robot-list__items {
+    padding-left: 80px; 
+    list-style-type: square;
+}
+
+.robot-list__subitems {
+    padding-left: 60px;
+    list-style-type: disc;
+}
+
+main section ul {
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    padding-left: 60px; 
+    margin-bottom: 20px;
+}
+
+#milista {
+    display: absolute;
+    text-align: left;
+    justify-content: left;
+    font-family: 'Arial', sans-serif;
+    margin: auto;
+    width: 60%;
+    padding-block: 5px 10px;
+}
+
+#none {
+    list-style-type: none;
+    padding: 10px;
+}
+
+/* Videos y contenedores de videos*/
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 42.5%;
+    height: 0;
+    overflow: hidden;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+/*Leyendas de fotos y videos y textos en naranja sin span*/
+
+p#leyenda, p#leyendaVideo {
+    display: flex;
+    align-items: right;
+    font-family: var(--fuente-sans-serif);
+    font-weight: 300;
+    justify-content: right;
+    font-size: 14px;
+    margin: 10px 0px 30px 0px;
+    color: var(--color-GrisOscuro);
+}
+
+p#leyendaVideo {
+    width: 60%;
+    margin: 0 auto;
+}
+
+p#leyenda>a {
+    margin: 0px 0px 0px 5px;
+    color: orange;
+    text-decoration: none;
+}
+
+p#leyenda>a:hover {
+    text-decoration: underline; 
+    }
+
+section p a#enlace, p a {
+    display: inline;
+    color: orange;
+    text-decoration: none;
+}
+
+section p a#enlace:hover, p a:hover {
+    display: inline;
+    text-decoration: underline;
+}
+
+/* Recuadro, foto y descripción de la autora */
+
+p#autora {
+    font-family: var(--fuente-sans-serif);
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 1.25px;
+    background-color: gainsboro;
+    text-align: center;
+    margin-top: 20px;
+}
+
+img#desiree {
+    width: 15%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 40px 0px 0px 0px;
+}
+
+p#desi {
+    width: 75%;
+    margin: auto;
+}
+
+/* Citas célebres*/
+
+#quote {
+    font-family: var(--fuente-serif);
+    font-weight: 300;
+    justify-content: left;
+    background-color: #f5f5f5;
+    border-left: 4px solid #ff4400;
+    margin: 0 auto;
+    font-size: 23px;
+    line-height: 1.5;
+    width: 55%;
+    padding: 20px 30px;
+}
